@@ -3,6 +3,7 @@ import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { ThemeToggler } from "./ThemeToggler";
 
 function Header() {
   return (
@@ -21,7 +22,7 @@ function Header() {
       </Link>
 
       <div className="px-5 flex space-x-2 items-center">
-        {/* theme toggler */}
+        <ThemeToggler />
 
         <UserButton afterSignOutUrl="/" />
         <SignedOut>
