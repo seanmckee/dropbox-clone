@@ -15,7 +15,7 @@ export default function Home() {
             Enhance your personal storage with Dropbox, offering a simple and
             efficient way to upload, organize, and access files from anywhere.
             Securely store important documents and media, and experience the
-            convenience of easy file management and sharing in one centrailized
+            convenience of easy file management and sharing in one centralized
             solution.
           </p>
 
