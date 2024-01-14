@@ -17,6 +17,7 @@ import { useUser } from "@clerk/nextjs";
 import { deleteDoc, doc } from "firebase/firestore";
 import { deleteObject, ref } from "firebase/storage";
 import { stat } from "fs";
+import toast from "react-hot-toast";
 
 export function DeleteModal() {
   const { user } = useUser();
@@ -34,6 +35,9 @@ export function DeleteModal() {
       console.error("user or fileId missing");
       return;
     }
+
+    const toastId = toast.loading("Deleting file...");
+
     console.log("fileid: " + fileId + " user: " + user.id);
     const fileRef = ref(storage, `users/${user.id}/files/${fileId}`);
 
@@ -47,6 +51,7 @@ export function DeleteModal() {
       console.log(error);
     }
 
+    toast.success("Deleted Successfully", { id: toastId });
     setIsDeleteModalOpen(false);
   }
 
