@@ -30,7 +30,11 @@ export function DeleteModal() {
     ]);
 
   async function deleteFile() {
-    if (!user || !fileId) return;
+    if (!user || !fileId) {
+      console.error("user or fileId missing");
+      return;
+    }
+    console.log("fileid: " + fileId + " user: " + user.id);
     const fileRef = ref(storage, `users/${user.id}/files/${fileId}`);
 
     try {
