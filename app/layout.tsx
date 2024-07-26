@@ -9,8 +9,8 @@ import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Dropbox Clone",
-  description: "Get started with Dropbox Clone",
+  title: "SkyVault",
+  description: "Get started with SkyVault today!",
 };
 
 export default function RootLayout({
